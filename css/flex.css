@@ -1,0 +1,22 @@
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.big-item{
+    width: 600px;
+}
+
+.item {
+    border: 2px;
+    border-radius: 10px;
+    border-color:darkorange;
+    border-style: dotted;
+    background-color: rgb(142, 232, 7);
+    padding: 10px;
+    width: 200px;
+    min-width: 300px;
+}

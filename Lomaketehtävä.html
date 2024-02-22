@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+    <title>Lomake-esimerkki</title>
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+    <body>
+        
+    <fieldset style ="width:430px"> 
+        <legend>Contact Information:</legend> 
+    <form action="/action_page.php">
+        
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" value=""> Preferred contact method:<br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" value="">
+        <input type="checkbox" id="Email" name="email" value="mail">
+        <label for="Email">Email</label><br>
+        <label for="mail">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" id="Email" name="mail" value="">
+        <input type="checkbox" id="Telephone" name="phone" value="phone">
+        <label for="Email">Telephone</label><br>
+        <label for="tphone">Telephone:</label>
+        <input type="text" id="Telephone" name="telephone" value="">  
+    </form>
+    </fieldset>
+    <fieldset style ="width:430px">
+        <legend>Feedback:</legend>
+        <label>Message Subject:</label>
+        <input type="text" id="msgsubject" name="msgsubject"><br>
+    <textarea name="message" rows="13" cols="45">
+    </textarea>
+    <div>
+
+    </div>
+    <label for="attach">Attach a file:</label>
+    <input type="file" id="myfile" name="myfile"><br>
+    <input type ="submit" value="Send">    
+
+</fieldset>
+    
+</body>
+</html>
