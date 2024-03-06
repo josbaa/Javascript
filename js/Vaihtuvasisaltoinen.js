@@ -18,6 +18,11 @@ function showMedia(index) {
     localStorage.setItem('lastMediaIndex', index);
 }
 
+
+
+
+
+
 $(document).ready(function () {
 
 
