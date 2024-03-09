@@ -1,98 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Random Fact</title>
-  
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  
-  <style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Fact</title>
 
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    
-    .spinner-container {
-      display: none;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  </style>
-</head>
-<body>
-    
-  <div class="container text-center">
-    <h1>Random Fact</h1>
-    
-    <button id="getFactButton" class="btn btn-primary">Get Fact</button>
-    
-    <div class="spinner-container">
-      <img src="spinner.gif" alt="spinner"/>
-    </div>
-   
-    
-    <div class="accordion mt-4" id="accordionExample">
-      <div class="card">
-        <div class="card-header" id="headingOne">
-          <h2 class="mb-0">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Random Fact
-            </button>
-          </h2>
-        </div>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/Ajax.css" />
+  </head>
 
-        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-          <div class="card-body" id="factContainer">
-            
+  <body>
+    <div class="container text-center">
+      <h1>Random Fact</h1>
+
+      <button id="getFactButton" class="btn btn-primary">Get Fact</button>
+
+      <div class="spinner-container">
+        <img src="spinner.gif" alt="spinner" />
+      </div>
+
+      <div class="accordion mt-4" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+            >
+                Random Fact
+              </button>
+            </h2>
+          </div>
+
+          <div
+            id="collapseOne"
+            class="collapse"
+            aria-labelledby="headingOne"
+            data-parent="#accordionExample"
+          >
+            <div class="card-body" id="factContainer"></div>
           </div>
         </div>
       </div>
+
+      <div id="counter" class="mt-4">Haut: 0</div>
     </div>
-    
-    <div id="counter" class="mt-4">Haut: 0</div>
-  </div>
 
-  
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    let searchCount = 0;
+    <div class="accordion accordion-flush" id="accordionFlushExample"></div>
 
-    document.getElementById('getFactButton').addEventListener('click', async () => {
-      
-      searchCount++;
-      updateSearchCounter();
-
-      
-      document.querySelector('.spinner-container').style.display = 'block';
-      
-      try {
-        
-        const response = await fetch('http://numbersapi.com/random/trivia');
-        const data = await response.text();
-        
-        document.getElementById('factContainer').innerHTML = data;
-      } catch (error) {
-        console.error(error);
-        
-        document.getElementById('factContainer').innerHTML = 'Error fetching data';
-      } finally {
-        
-        document.querySelector('.spinner-container').style.display = 'none';
-      }
-    });
-
-
-    function updateSearchCounter() {
-      document.getElementById('counter').innerText = `Haut: ${searchCount}`;
-    }
-  </script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script defer src="js/Ajax.js"></script>
+  </body>
 </html>

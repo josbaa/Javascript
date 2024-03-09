@@ -1,51 +1,38 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Document</title>
-<link rel="stylesheet" href="css/calculator.css"> 
+<title>Calculator</title>
+<link rel="stylesheet" href="css/calculator.css" />
 </head>
-
-<i class="bi bi-info-circle"></i>
-    <h1>Valitse numerot ja laske</h1>
-    <div>
-      <label for="number1">numero:</label>
-      <input type="text" id="number1" value="">
-    </div>
-    <div>
-      <label for="number2">numero:</label>
-      <input type="text" id="number2" value="">
-      <select id="operator">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-      </select>
-    </div>
-    <div>
-      <label for="operator">Valitse:</label>
-      <select id="operator">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-      </select>
-    </div>
-    <button type="button" class="btn btn-primary" id="calc-button" onclick="calculate()">LASKE</button>
-    <p id="result">Result: </p>
+<body>
     
-    <script src="script.js"></script>
+    <h1>Valitse numerot ja laske</h1>
+<div class="calculator">
+  <label for="numberA">Numero 1:</label>
+  <input type="number" id="numberA" min="1" max="10" value="">
+  <button onclick="decrementNumber('numberA')">-</button>
+  <button onclick="incrementNumber('numberA')">+</button>
+  <br><br>
+  <label for="numberB">Numero 2:</label>
+  <input type="number" id="numberB" min="1" max="10" value="">
+  <button onclick="decrementNumber('numberB')">-</button>
+  <button onclick="incrementNumber('numberB')">+</button>
+  <br><br>
+  <label for="operator">Operaattori:</label>
+  <select id="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <br><br>
+  <button onclick="calculate()">Laske</button>
+</div>
 
-
-
-
-
-
-
-
-
-
+<script defer src="js/calculator.js"></script>
 </body>
 </html>
+

@@ -1,31 +1,44 @@
-function calculate() {
-    let num1 = parseInt(document.getElementById("numero").value);
-    let num2 = parseInt(document.getElementById("numero").value);
-    let operator = document.getElementById("operator").value;
-    
-    if (isNaN(num1) || isNaN(num2)) {
-      alert("Please enter valid numbers.");
-      return;
-    }
-    
-    let result;
-    switch (valitse) {
-      case "+":
-        result = num1 + num2;
-        break;
-      case "-":
-        result = num1 - num2;
-        break;
-      case "*":
-        result = num1 * num2;
-        break;
-      case "/":
-        result = num1 / num2;
-        break;
-      default:
-        result = "Invalid operator";
-    }
-    
-    document.getElementById("result").textContent = "Result: " + result;
+function getRandomNumber() {
+  return Math.floor(Math.random() * 10) + 1;
+}
+
+document.getElementById('numberA').value = getRandomNumber();
+document.getElementById('numberB').value = getRandomNumber();
+
+function incrementNumber(id) {
+  var input = document.getElementById(id);
+  if (parseInt(input.value) < 10) {
+    input.value = parseInt(input.value) + 1;
   }
-  
+}
+
+function decrementNumber(id) {
+  var input = document.getElementById(id);
+  if (parseInt(input.value) > 1) {
+    input.value = parseInt(input.value) - 1;
+  }
+}
+
+function calculate() {
+  var numberA = parseInt(document.getElementById('numberA').value);
+  var numberB = parseInt(document.getElementById('numberB').value);
+  var operator = document.getElementById('operator').value;
+  var result;
+
+  switch (operator) {
+    case '+':
+      result = numberA + numberB;
+      break;
+    case '-':
+      result = numberA - numberB;
+      break;
+    case '*':
+      result = numberA * numberB;
+      break;
+    case '/':
+      result = numberA / numberB;
+      break;
+  }
+
+  alert("Result: " + result);
+}

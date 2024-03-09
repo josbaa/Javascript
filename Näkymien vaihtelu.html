@@ -1,26 +1,24 @@
-<!doctype html>
-    <html lang="en">
-        <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-                <title>Näkymien vaihtaminen</title>
-                
-        </head>
-        <body>
+<!DOCTYPE html>
+<html lang="en">
 
-            <div class="container">
-                <button id="grid-view" class="btn btn-primary"><i class="bi bi-grid-3x3-gap-fill"></i></button>
-                <button id="list-view" class="btn btn-primary"><i class="bi bi-list-ul"></i></button>
-                <div id="image-container" class="grid-container">
-                    <!-- Your media elements here -->
-                    <div class="item">Media 1</div>
-                    <div class="item">Media 2</div>
-                    <div class="item">Media 3</div>
-                    <div class="item">Media 4</div>
-                    <div class="item">Media 5</div>
-                </div>
-            </div>
-            
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediaelementin Sisältö</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/Näkymienvaihtelu.css">
+    <script src="js/Näkymienvaihtelu.js"></script>
+</head>
 
-        </body>
-    </html>
+<body>
+
+    <div id="media-container" class="grid-container">
+        <!-- Tähän lisätään dynaamisesti mediasisältö -->
+    </div>
+    <button id="toggle-list-view-btn" onclick="toggleListView()"><i class="fas fa-list"></i> Lista</button>
+    <button id="toggle-grid-view-btn" onclick="toggleGridView()"><i class="fas fa-th-large"></i> Ruudukko</button>
+
+</body>
+
+</html>

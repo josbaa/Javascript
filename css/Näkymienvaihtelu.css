@@ -1,16 +1,37 @@
-.grid-container {
+
+/* CSS Grid -listanäkymä */
+#media-container.list-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 20px;
+    /* Viisi saraketta */
+    grid-gap: 10px;
+    /* Väli */
 }
 
+/* CSS Grid -gridinäkymä */
+#media-container.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Kolme saraketta */
+    grid-gap: 10px;
+    /* Väli */
+}
+
+/* Yksittäisen median tyyli */
+.media-item {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Div-elementin muotoilu grid-näkymälle */
+.grid-container {
+    background-color: lightblue;
+    padding: 10px;
+}
+
+/* Div-elementin muotoilu listanäkymälle */
 .list-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.item {
-    background-color: #ccc;
-    padding: 20px;
-    text-align: center;
+    background-color: lightgreen;
+    padding: 10px;
 }
