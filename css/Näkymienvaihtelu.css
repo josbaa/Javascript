@@ -16,15 +16,14 @@
 /* Tyyli yksittäiselle median elementille */
 .media-item {
     width: 100%;
-    height: 50%;
+    height: 50px;
     max-width: 100%;
 }
-
 /* Tyyli yksittäiselle median elementille ruudukkonäkymässä */
 .grid-container .media-item {
     width: 50%; /* Aseta kuvalle 100% leveys, jotta se täyttää sille osoitetun tilan */
     height: auto; /* Säilytä kuvasuhteet */
-    max-width: 50%; /* Estä kuvan skaalautuminen sen alkuperäisen koon yli */
+    max-width: 100%; /* Estä kuvan skaalautuminen sen alkuperäisen koon yli */
     margin-bottom: 10px; /* Lisää väliä kukin kuvan väliin */
 }
 
@@ -33,7 +32,7 @@
     display: grid;
     grid-gap: 10px;
     padding: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Tämä voi olla erilainen kuin listanäkymässä */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Tämä voi olla erilainen kuin listanäkymässä */
     background-color: rgb(216, 178, 7);
 }
 
