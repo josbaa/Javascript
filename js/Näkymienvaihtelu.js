@@ -21,7 +21,7 @@ $(document).ready(function () {
 
 function toggleListView() {
     $('#media-container').removeClass('grid-container').addClass('list-container');
-    $('.media-item').css({ 'width': '50%', 'height': 'auto' });
+    $('.media-item').css({ 'width': 'auto', 'height': 'auto' });
 }
 
 function toggleGridView() {
