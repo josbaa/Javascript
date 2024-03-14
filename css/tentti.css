@@ -1,6 +1,33 @@
-.center {
-    margin: auto;
+
+  body {
     width: 50%;
-    border: 3px solid rgb(225, 152, 16);
-    padding: 50px;
+    margin: auto;
+    background-color: rgb(182, 61, 61);
+}
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
   }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .form-group, .btn-group-toggle, .form-group form-check, .form-group p {
+    margin-bottom: 10px;
+  }
+
+  p,
+label {
+  font:
+    1rem 'Fira Sans',
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+  
+

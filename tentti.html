@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzan tilaaminen</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/tentti.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>Tervetuloa Ali Johannes Baba Pizzeria</h1>
+      <h2>Täällä ei kaikki painikkeet toimi mutta ei haittaa!</h2>
+      <h3>Tilaa Pizza ennakkoon ja nouda!</h3>
+      <img src="images/PIXNIO-454620-2700x1809.jpeg" alt="Pizza" style="width: 400px; height: auto;">
+
+
+      <div class="form-group">
+        <label for="pizza">Valitse pizza:</label>
+        <select id="pizza" class="form-control" onchange="laskeSumma()">
+          <option value="0" data-hinta="10">Tropicana</option>
+          <option value="1" data-hinta="12">Perfetta</option>
+          <option value="2" data-hinta="13">Pepperoni</option>
+        </select>
+      </div>
+
+      <fieldset>
+        <legend>Valitse extra lisuke ja valitse lisukkeiden määrä (hinta päivittyy lisukkeiden määrän mukaan):</legend>
+      
+        <div>
+          <input type="radio" id="huey" name="drone" value="huey" checked />
+          <label for="huey">Valkosipuli</label>
+        </div>
+      
+        <div>
+          <input type="radio" id="dewey" name="drone" value="dewey" />
+          <label for="dewey">Oregano</label>
+        </div>
+      
+        <div>
+          <input type="radio" id="louie" name="drone" value="louie" />
+          <label for="louie">Aurajuusto</label>
+        </div>
+      </fieldset>
+
+      <div class="form-group">
+        <label for="extrat">Extrat (1 €/kpl):</label>
+        <input
+          type="number"
+          id="extrat"
+          min="0"
+          value="0"
+          class="form-control"
+          oninput="laskeSumma()"
+        />
+      </div>
+
+
+      <div class="form-group form-check">
+        <input
+          type="checkbox"
+          id="kantaAsiakas"
+          class="form-check-input"
+          onchange="laskeSumma()"
+        />
+        <label class="form-check-label" for="kantaAsiakas"
+          >Oletko kanta-asiakas?</label
+        >
+      </div>
+
+      <div class="form-group">
+        <p>Yhteensä: <span id="summa">0</span> €</p>
+      </div>
+
+      <button id="tilaaBtn" class="btn btn-primary">Tilaa</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script defer src="js/tentti.js"></script>
+  </body>
+</html>
